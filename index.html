@@ -6,31 +6,62 @@
 </head>
 <style>
   body {
-    background-color: #fff7e6;
-    font-family: "Yu Gothic", sans-serif;
-    color: #333;
-    text-align: center;
-    padding: 20px;
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", sans-serif;
+      background-color: #fdf6e3;
+      margin: 0;
+      padding: 0;
+      color: #333;
   }
 
-  h1 {
-    color: #ff7f50;
-  }
+    /* ページ上部タイトル */
+    header {
+      background-color: #ffb347;
+      text-align: center;
+      padding: 40px 20px;
+      color: white;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+      letter-spacing: 2px;
+    }
 
-  img {
-    border-radius: 20px;
-    box-shadow: 0 0 10px #ccc;
-  }
-
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
-
-  li {
-    margin: 5px 0;
-  }
-</style>
+    /* 記事一覧 */
+    main {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .post {
+      background-color: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+    .post:hover {
+      transform: translateY(-5px);
+    }
+    .post h2 {
+      margin-top: 0;
+      color: #ff7f50;
+    }
+    .post p {
+      margin-bottom: 0;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    a:hover {
+      color: #ff4500;
+      text-decoration: underline;
+    }
+  </style>
+  <!-- Google Fontsで日本語フォント読み込み -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+</head>
 <body>
   <h1>はむぞうの観察日記</h1>
   <p>こんにちは！ゴールデンハムスターの「はむぞう」です🐹</p>
@@ -65,6 +96,7 @@
 </div>
 </body>
 </html>
+
 
 
 
