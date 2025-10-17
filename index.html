@@ -56,25 +56,19 @@
       height: auto;
     }
 
-    .post {
-      background-color: white;
-      padding: 20px;
-      margin-bottom: 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      transition: transform 0.2s;
-    }
-    .post:hover {
-      transform: translateY(-5px);
-    }
-    .post h2 {
-      margin-top: 0;
-      color: #ff7f50;
-    }
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
+   article {
+  margin-bottom: 30px; /* 記事間の余白 */
+}
+
+article h2 {
+  color: #ff6f3c;
+  margin-bottom: 5px;
+}
+
+article p {
+  line-height: 1.6;
+  color: #555;
+}
     a:hover {
       color: #ff4500;
       text-decoration: underline;
@@ -100,33 +94,37 @@
   </header>
 
   <main>
-    <div class="section">
+    <article>
       <h2>プロフィール</h2>
       <ul>
         <li>種類：クリームバンデット</li>
         <li>性格：ビビりだけどふてぶてしい</li>
         <li>特徴：右耳がちょっと欠けてる＆タマタマが立派！</li>
       </ul>
-    </div>
+    </article>
+  
 
-    <div class="section">
+   <article>
       <h2>好きなこと</h2>
       <p>夜中に回し車で爆走すること！</p>
-    </div>
+   </article>
 
-    <div class="section">
+    <article>
       <h2>写真</h2>
       <img src="hamuzo_main" alt="はむぞうの写真">
-    </div>
+    </article>
+  
 
-    <div class="section">
+    <div class="post">
       <h2>はむぞうからひとこと！</h2>
       <button onclick="sayHello()">クリックしてね🐹</button>
     </div>
 
-    <div class="post">
+    <article>
       <h2><a href="post1.html">2025/10/17　夜中に爆走してた💨</a></h2>
       <p>最近、回し車の音が止まらない…！</p>
+    </article>
+    
     </div>
   </main>
 
@@ -137,4 +135,5 @@
   </script>
 </body>
 </html>
+
 
