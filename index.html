@@ -6,133 +6,75 @@
   <!-- Google Fontsで日本語フォント読み込み -->
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
   <style>
-    /* 全体設定 */
-    header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #fff;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  padding: 10px 20px;
-  z-index: 1000;
-  transition: top 0.3s ease; /* スムーズに出し入れ */
-}
+  /* 全体設定 */
+  body {
+    padding-top: 80px; /* ヘッダーの高さ分余白 */
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", sans-serif;
+    background-color: #fdf6e3;
+    margin: 0;
+    color: #333;
+    line-height: 1.6;
+  }
 
-body {
-  padding-top: 80px; /* ヘッダーの高さ分余白 */
-      font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", sans-serif;
-      background-color: #fdf6e3;
-      margin: 0;
-      padding: 0;
-      color: #333;
-      line-height: 1.6; /* 行間を広げて読みやすく */
-    }
+  /* ヘッダー部分（固定＋デザイン） */
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffb347;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+    padding: 20px;
+    z-index: 1000;
+    transition: top 0.3s ease;
+  }
 
-    /* ヘッダー部分 */
-    header {
-      background-color: #ffb347;
-      color: white;
-      text-align: center;
-      padding: 40px 20px;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5em;
-      letter-spacing: 2px;
-    }
-    header p {
-      margin-top: 10px;
-      font-size: 1.2em;
-    }
+  header h1 {
+    margin: 0;
+    font-size: 2em;
+    letter-spacing: 2px;
+  }
+  header p {
+    margin-top: 5px;
+    font-size: 1.1em;
+  }
 
-    /* メイン部分 */
-    main {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
+  /* ロゴ画像を左上に配置する場合 */
+  .logo-link {
+    position: absolute;
+    left: 20px;
+    top: 10px;
+  }
 
-    /* セクションごとの箱 */
-    .section {
-      background-color: white;
-      padding: 20px;
-      margin-bottom: 30px;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-    }
+  .logo {
+    height: 50px;
+    width: auto;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
 
-    /* 記事一覧 */
-    .posts {
-      margin-top: 40px;
-    }
-    .posts h2 {
-      margin-bottom: 20px;
-      color: #ff7f50;
-    }
+  .logo:hover {
+    transform: scale(1.05);
+  }
 
-    /* 各記事 */
-    article {
-      margin-bottom: 20px;
-    }
-    article h3 {
-      margin: 0;
-      color: #ff6f3c;
-    }
-    article p {
-      margin-top: 5px;
-      color: #555;
-    }
-
-    /* リンク設定 */
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-    article a:hover {
-      color: #ff4500;               /* オレンジ色に変化 */
-      text-decoration: underline;   /* 下線が出る */
-      transition: all 0.2s ease;    /* ふわっと変化 */
-    }
-
-    /* ボタン設定 */
-    button {
-      background-color: #ff7f50;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 1em;
-      transition: all 0.2s ease; /* 動きをなめらかに */
-    }
-    button:hover {
-      background-color: #ffa07a;    /* 少し明るく変化 */
-      transform: scale(1.05);       /* 少し大きくなる */
-    }
-
-    /* 画像を中央に配置して調整 */
-    img {
-      display: block;
-      max-width: 100%;
-      height: auto;
-      margin: 0 auto;
-      border-radius: 12px;
-    }
-
-    /* 見出しの余白調整 */
-    h2, h3 {
-      margin-top: 0;
-    }
-  </style>
+  main {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+</style>
 </head>
 
 <body>
   <header>
-    <h1>🐹 はむぞう観察日記</h1>
-    <p>毎日のかわいい＆おもしろい出来事を記録中</p>
-  </header>
-
+  <a href="index.html" class="logo-link">
+    <img src="hamuzo_logo.png" alt="はむぞうロゴ" class="logo">
+  </a>
+  <h1>🐹 はむぞう観察日記</h1>
+  <p>毎日のかわいい＆おもしろい出来事を記録中</p>
+</header>
   <main>
     <section class="section">
       <h2>プロフィール</h2>
@@ -196,4 +138,5 @@ window.addEventListener("scroll", () => {
 
 </body>
 </html>
+
 
