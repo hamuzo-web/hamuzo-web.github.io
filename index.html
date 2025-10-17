@@ -7,7 +7,20 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
   <style>
     /* 全体設定 */
-    body {
+    header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 10px 20px;
+  z-index: 1000;
+  transition: top 0.3s ease; /* スムーズに出し入れ */
+}
+
+body {
+  padding-top: 80px; /* ヘッダーの高さ分余白 */
       font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", sans-serif;
       background-color: #fdf6e3;
       margin: 0;
@@ -164,5 +177,23 @@
       alert("チュッ！夜はこれからだぜ🐹✨");
     }
   </script>
+  
+  <script>
+let lastScrollY = 0;
+const header = document.querySelector("header");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > lastScrollY) {
+    // 下にスクロール → ヘッダーを隠す
+    header.style.top = "-100px";
+  } else {
+    // 上にスクロール → ヘッダーを表示
+    header.style.top = "0";
+  }
+  lastScrollY = window.scrollY;
+});
+</script>
+
 </body>
 </html>
+
