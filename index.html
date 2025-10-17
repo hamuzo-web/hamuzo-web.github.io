@@ -78,10 +78,18 @@ a:hover {
       cursor: pointer;
       font-size: 1em;
     }
-    button:hover {
-      background-color: #ff4500;
-    }
+    article a:hover {
+  color: #ff4500;               /* オレンジ色に変わる */
+  text-decoration: underline;   /* 下線を出す */
+  transition: all 0.2s ease;    /* ふわっと変化 */
+}
 
+/* ボタンにマウスを乗せたときの効果 */
+button:hover {
+  background-color: #ff7f50;    /* すこし明るい色に変化 */
+  transform: scale(1.05);       /* 少し大きくなる */
+  transition: all 0.2s ease;
+}
     body {
   line-height: 1.6;
 }
@@ -135,6 +143,11 @@ h2, h3 {
           
       <h3><a href="post1.html">2025/10/17　夜中に爆走してた💨</a></h3>
       <p>最近、回し車の音が止まらない…！</p>
+
+          
+      <article>
+      <h3><a href="post1.html">2025/10/18　粟ボールを食べない</a></h3>
+      <p>好き嫌いがはっきりしているようだ</p>
         </article>
     
      </section>
@@ -147,6 +160,7 @@ h2, h3 {
   </script>
 </body>
 </html>
+
 
 
 
